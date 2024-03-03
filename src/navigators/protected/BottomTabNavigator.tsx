@@ -10,7 +10,7 @@ const Tab = createMaterialBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   return (
-    <Tab.Navigator screenOptions={{ tabBarBadge: 9 }}>
+    <Tab.Navigator>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
@@ -33,6 +33,7 @@ const BottomTabNavigator = () => {
         name="Favorites"
         component={FavoritesScreen}
         options={() => ({
+          tabBarBadge: 9,
           tabBarIcon: ({ color }) => (
             <CustomIcon family="Ionicons" name="heart-outline" color={color} />
           ),
