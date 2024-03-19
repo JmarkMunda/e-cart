@@ -5,7 +5,7 @@ import BottomTabNavigator from "./BottomTabNavigator";
 import CustomIcon from "../../components/CustomIcon";
 import { TouchableOpacity, View } from "react-native";
 import SearchBar from "../../components/SearchBar";
-import Header from "../../components/Header";
+import Header from "../../components/Header/ScreenHeader";
 
 const Stack = createNativeStackNavigator();
 

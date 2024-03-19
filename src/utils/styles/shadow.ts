@@ -30,3 +30,5 @@ const shadow = {
     elevation: 6,
   },
 };
+
+export default shadow;

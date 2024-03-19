@@ -1,12 +1,17 @@
 import {
-  DefaultTheme as RNLightTheme,
-  DarkTheme as RNDarkTheme,
+  DefaultTheme as NavigationDefaultTheme,
+  DarkTheme as NavigationDarkTheme,
 } from "@react-navigation/native";
+import {
+  adaptNavigationTheme,
+  MD3DarkTheme,
+  MD3LightTheme,
+} from "react-native-paper";
 
 const LightScheme = {
   colors: {
     primary: "rgb(238, 240, 142)",
-    background: "rgb(255, 255, 255)",
+    background: "rgb(240, 240, 240)",
     card: "rgb(226, 226, 226)",
     text: "rgb(29, 29, 29)",
     border: "rgb(95, 95, 95)",
@@ -25,20 +30,28 @@ const DarkScheme = {
   },
 };
 
-const LightTheme = {
-  ...RNLightTheme,
+const { LightTheme, DarkTheme } = adaptNavigationTheme({
+  reactNavigationLight: NavigationDefaultTheme,
+  reactNavigationDark: NavigationDarkTheme,
+});
+
+const CombinedDefaultTheme = {
+  ...MD3LightTheme,
+  ...LightTheme,
   colors: {
-    ...RNLightTheme.colors,
-    ...LightScheme.colors,
+    ...MD3LightTheme.colors,
+    ...LightTheme.colors,
+    ...LightScheme.colors, // custom colors
+  },
+};
+const CombinedDarkTheme = {
+  ...MD3DarkTheme,
+  ...DarkTheme,
+  colors: {
+    ...MD3DarkTheme.colors,
+    ...DarkTheme.colors,
+    ...DarkScheme.colors, // custom colors
   },
 };
 
-const DarkTheme = {
-  ...RNDarkTheme,
-  colors: {
-    ...RNDarkTheme.colors,
-    ...DarkScheme.colors,
-  },
-};
-
-export { LightTheme, DarkTheme };
+export { CombinedDefaultTheme, CombinedDarkTheme };

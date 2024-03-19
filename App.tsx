@@ -4,20 +4,24 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ProtectedNavigator from "./src/navigators/protected";
 import PublicNavigator from "./src/navigators/public";
-import { DarkTheme, LightTheme } from "./src/utils/themes";
+import { CombinedDarkTheme, CombinedDefaultTheme } from "./src/utils/themes";
+import { PaperProvider } from "react-native-paper";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   const colorScheme = useColorScheme();
-  const theme = colorScheme === "dark" ? DarkTheme : LightTheme;
+  const theme =
+    colorScheme === "dark" ? CombinedDarkTheme : CombinedDefaultTheme;
 
   let isLoggedIn = true;
 
   return (
-    <NavigationContainer theme={theme}>
-      {isLoggedIn ? <ProtectedNavigator /> : <PublicNavigator />}
-    </NavigationContainer>
+    <PaperProvider theme={theme}>
+      <NavigationContainer theme={theme}>
+        {isLoggedIn ? <ProtectedNavigator /> : <PublicNavigator />}
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
 

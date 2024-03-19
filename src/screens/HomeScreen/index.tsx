@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text } from "react-native";
 import Container from "../../components/Container";
 import { useHeaderHeight } from "@react-navigation/elements";
+import BrowseList from "./components/BrowseList";
 
 const HomeScreen = () => {
   const headerHeight = useHeaderHeight();
@@ -11,7 +11,7 @@ const HomeScreen = () => {
       contentContainerStyle={{
         paddingTop: headerHeight,
       }}>
-      <Text>Home Screen</Text>
+      <BrowseList />
     </Container>
   );
 };

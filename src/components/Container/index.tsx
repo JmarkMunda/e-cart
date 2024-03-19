@@ -17,8 +17,9 @@ const Container = ({ children, contentContainerStyle }: IContainer) => {
     <View
       style={[
         {
-          paddingTop: top,
-          paddingBottom: bottom,
+          flex: 1,
+          // paddingTop: top,
+          // paddingBottom: bottom,
           paddingHorizontal: 16,
         },
         contentContainerStyle,

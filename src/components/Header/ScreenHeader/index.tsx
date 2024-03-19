@@ -1,9 +1,8 @@
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
-import CustomIcon from "../CustomIcon";
 import { SafeAreaView } from "react-native-safe-area-context";
-import SearchBar from "../SearchBar";
-import { globalStyles } from "../../utils/styles";
+import { TouchableOpacity, View } from "react-native";
+import CustomIcon from "../../CustomIcon";
+import SearchBar from "../../SearchBar";
 import styles from "./styles";
 
 const Header = () => {
