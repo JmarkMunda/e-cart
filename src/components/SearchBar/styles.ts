@@ -6,6 +6,5 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 16,
     padding: 16,
-    backgroundColor: "white",
   },
 });

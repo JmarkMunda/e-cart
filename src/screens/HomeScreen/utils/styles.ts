@@ -6,7 +6,6 @@ const SCREEN_HEIGHT = Dimensions.get("screen").height;
 
 const browseItemStyles = StyleSheet.create({
   cardContainer: {
-    backgroundColor: "#ffffff", // TODO: replace this
     height: 250,
     flex: 1,
     borderRadius: 16,
@@ -19,7 +18,6 @@ const browseItemStyles = StyleSheet.create({
     top: 8,
     right: 8,
     zIndex: 2,
-    backgroundColor: "rgba(255,255,255, 0.9)",
     padding: 8,
     borderRadius: 99,
   },
@@ -37,7 +35,6 @@ const browseItemStyles = StyleSheet.create({
     position: "absolute",
     top: 10,
     left: 10,
-    backgroundColor: "rgba(255, 255, 255, 1)",
     flexDirection: "row",
     gap: 4,
     padding: 4,

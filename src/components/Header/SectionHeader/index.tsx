@@ -3,6 +3,7 @@ import { TouchableOpacity, View } from "react-native";
 import Text from "../../Text";
 import CustomIcon from "../../CustomIcon";
 import { ICustomIcon } from "../../CustomIcon/types";
+import { useAppTheme } from "../../../utils/themes";
 
 interface ISectionHeader {
   label: string;
@@ -11,6 +12,8 @@ interface ISectionHeader {
 }
 
 const SectionHeader = ({ label, leftIcon, rightButton }: ISectionHeader) => {
+  const { colors } = useAppTheme();
+
   return (
     <View
       style={{
@@ -19,12 +22,16 @@ const SectionHeader = ({ label, leftIcon, rightButton }: ISectionHeader) => {
         justifyContent: "space-between",
       }}>
       <View style={{ flexDirection: "row", alignItems: "center", gap: 4 }}>
-        <Text variant="headingBold">{label}</Text>
+        <Text variant="headingBold" color={colors.text}>
+          {label}
+        </Text>
         {leftIcon && <CustomIcon {...leftIcon} />}
       </View>
       {rightButton && (
         <TouchableOpacity onPress={rightButton.onPress}>
-          <Text variant="paragraph">{rightButton.label}</Text>
+          <Text variant="paragraph" color={colors.text}>
+            {rightButton.label}
+          </Text>
         </TouchableOpacity>
       )}
     </View>

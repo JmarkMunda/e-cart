@@ -40,6 +40,10 @@ const typography = {
   description: {
     fontSize: fontSizes.medium,
   },
+  descriptionBold: {
+    fontSize: fontSizes.medium,
+    fontWeight: "bold",
+  },
   small: {
     fontSize: fontSizes.small,
   },
