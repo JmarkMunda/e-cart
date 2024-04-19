@@ -1,18 +1,17 @@
 import React from "react";
 import { Image, View } from "react-native";
-import { IBrowseItem } from "../utils/types";
-import Text from "../../../components/Text";
-import CustomIcon from "../../../components/CustomIcon";
-import styles from "../utils/styles";
 import { LinearGradient } from "expo-linear-gradient";
-import { useAppTheme } from "../../../utils/themes";
+import { IProductCard } from "./type";
+import { useAppTheme } from "../../utils/themes";
+import styles from "./styles";
+import CustomIcon from "../CustomIcon";
+import Text from "../Text";
 
-const BrowseItem = ({ item, index }: IBrowseItem) => {
-  const { colors, dark } = useAppTheme();
+const ProductCard = ({ item, index }: IProductCard) => {
+  const { colors } = useAppTheme();
 
   return (
     <View
-      // onLayout={(e) => console.log(e.nativeEvent.layout.height)}
       style={[
         styles.cardContainer,
         { backgroundColor: colors.card },
@@ -59,4 +58,4 @@ const BrowseItem = ({ item, index }: IBrowseItem) => {
   );
 };
 
-export default BrowseItem;
+export default ProductCard;

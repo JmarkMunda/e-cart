@@ -1,18 +1,17 @@
 import React from "react";
-import { View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { FlashList } from "@shopify/flash-list";
 import { products } from "../../../utils/data";
 import { IBrowseItem } from "../utils/types";
-import BrowseItem from "./BrowseItem";
-import Text from "../../../components/Text";
 import Banner from "./Banner";
-import CustomIcon from "../../../components/CustomIcon";
 import SectionHeader from "../../../components/Header/SectionHeader";
+import ProductCard from "../../../components/ProductCard";
+import styles from "../utils/styles";
 
 const BrowseList = () => {
   const renderHeader = () => (
     <>
-      <View style={{ marginBottom: 24 }}>
+      <View style={styles.listHeader}>
         <SectionHeader
           label="FEATURED"
           leftIcon={{
@@ -21,7 +20,9 @@ const BrowseList = () => {
             color: "orange",
           }}
         />
-        <Banner />
+        <ScrollView horizontal>
+          <Banner />
+        </ScrollView>
       </View>
       <SectionHeader
         label="HOT"
@@ -36,11 +37,11 @@ const BrowseList = () => {
   );
 
   const renderItem = ({ item, index }: IBrowseItem) => (
-    <BrowseItem item={item} index={index} />
+    <ProductCard item={item} index={index} />
   );
 
   return (
-    <View style={{ minHeight: 2, flex: 1 }}>
+    <View style={styles.listContainer}>
       <FlashList
         data={products}
         renderItem={renderItem}

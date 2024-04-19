@@ -14,7 +14,7 @@ const Banner = () => {
       colors={["#83b2f0", "#d4d2fc"]}
       start={[0.3, 0.5]}
       style={styles.bannerContainer}>
-      <View style={{ flex: 1, gap: 4 }}>
+      <View style={{ flex: 1, gap: 4, paddingHorizontal: 8 }}>
         <View style={{ marginVertical: 8 }}>
           <Text color={colors.background}>New collection</Text>
           <Text variant="titleBold" color={colors.background}>
@@ -38,8 +38,14 @@ const Banner = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={{ flex: 1 }}>
-        <Image source={nikeAirMax} style={{ width: 200, flex: 1 }} />
+      <View style={{}}>
+        <Image
+          source={nikeAirMax}
+          style={{
+            width: 200,
+            flex: 1,
+          }}
+        />
       </View>
     </LinearGradient>
   );
