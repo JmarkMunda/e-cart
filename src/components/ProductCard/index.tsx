@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View } from "react-native";
+import { Image, Pressable, TouchableOpacity, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { IProductCard } from "./type";
 import { useAppTheme } from "../../utils/themes";
@@ -11,17 +11,17 @@ const ProductCard = ({ item, index }: IProductCard) => {
   const { colors } = useAppTheme();
 
   return (
-    <View
+    <TouchableOpacity
       style={[
         styles.cardContainer,
         { backgroundColor: colors.card },
         index % 2 === 0 ? { marginRight: 8 } : { marginLeft: 8 },
       ]}>
       {/* SAVE BUTTON */}
-      <View
+      <TouchableOpacity
         style={[styles.cardSaveBtn, { backgroundColor: colors.background }]}>
         <CustomIcon family="AntDesign" name="hearto" color={colors.text} />
-      </View>
+      </TouchableOpacity>
       {/* IMAGE */}
       <View style={styles.cardImageContainer}>
         <Image src={item.thumbnail} style={styles.cardImage} />
@@ -54,7 +54,7 @@ const ProductCard = ({ item, index }: IProductCard) => {
           </Text>
         </View>
       </LinearGradient>
-    </View>
+    </TouchableOpacity>
   );
 };
 

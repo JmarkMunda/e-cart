@@ -11,7 +11,8 @@ const products: ProductType[] = [
     rating: 4.57,
     stock: 83,
     category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/6/thumbnail.png",
+    thumbnail:
+      "https://images.pexels.com/photos/27008964/pexels-photo-27008964/free-photo-of-a-tree-is-sitting-on-the-shore-of-a-lake.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1-of-a-lake-27008964/",
     images: [
       "https://cdn.dummyjson.com/product-images/6/1.png",
       "https://cdn.dummyjson.com/product-images/6/2.jpg",
@@ -29,7 +30,8 @@ const products: ProductType[] = [
     rating: 4.25,
     stock: 50,
     category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/7/thumbnail.jpg",
+    thumbnail:
+      "https://images.pexels.com/photos/27519587/pexels-photo-27519587/free-photo-of-a-building-with-a-blue-sky-and-a-white-roof.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     images: [
       "https://cdn.dummyjson.com/product-images/7/1.jpg",
       "https://cdn.dummyjson.com/product-images/7/2.jpg",
@@ -47,7 +49,8 @@ const products: ProductType[] = [
     rating: 4.43,
     stock: 68,
     category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/8/thumbnail.jpg",
+    thumbnail:
+      "https://images.pexels.com/photos/24017562/pexels-photo-24017562/free-photo-of-purple-blossoms-on-tree.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     images: [
       "https://cdn.dummyjson.com/product-images/8/1.jpg",
       "https://cdn.dummyjson.com/product-images/8/2.jpg",
@@ -66,7 +69,8 @@ const products: ProductType[] = [
     rating: 4.54,
     stock: 96,
     category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/9/thumbnail.jpg",
+    thumbnail:
+      "https://images.pexels.com/photos/27302823/pexels-photo-27302823/free-photo-of-blueberries-on-and-near-plate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     images: [
       "https://cdn.dummyjson.com/product-images/9/1.jpg",
       "https://cdn.dummyjson.com/product-images/9/2.png",
@@ -85,7 +89,8 @@ const products: ProductType[] = [
     rating: 4.43,
     stock: 89,
     category: "laptops",
-    thumbnail: "https://cdn.dummyjson.com/product-images/10/thumbnail.jpeg",
+    thumbnail:
+      "https://images.pexels.com/photos/17354530/pexels-photo-17354530/free-photo-of-grass-growing-on-sandy-beach.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     images: [
       "https://cdn.dummyjson.com/product-images/10/1.jpg",
       "https://cdn.dummyjson.com/product-images/10/2.jpg",
@@ -102,7 +107,8 @@ const products: ProductType[] = [
     discountPercentage: 8.18,
     stock: 65,
     category: "fragrances",
-    thumbnail: "https://cdn.dummyjson.com/product-images/11/thumbnail.jpg",
+    thumbnail:
+      "https://images.pexels.com/photos/21739955/pexels-photo-21739955/free-photo-of-sea-and-naples-on-coast-on-horizon.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     images: [
       "https://cdn.dummyjson.com/product-images/11/1.jpg",
       "https://cdn.dummyjson.com/product-images/11/2.jpg",
@@ -119,7 +125,8 @@ const products: ProductType[] = [
     rating: 4.69,
     stock: 94,
     category: "smartphones",
-    thumbnail: "https://cdn.dummyjson.com/product-images/1/thumbnail.jpg",
+    thumbnail:
+      "https://images.pexels.com/photos/27203450/pexels-photo-27203450/free-photo-of-a-narrow-street-with-blue-shutters-and-white-walls.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     images: [
       "https://cdn.dummyjson.com/product-images/1/1.jpg",
       "https://cdn.dummyjson.com/product-images/1/2.jpg",
