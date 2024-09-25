@@ -7,10 +7,15 @@ import { IContainer } from "./types";
  * A component that provides padding to its children based on the safe area insets.
  *
  * @param children - The children to be padded
+ * @param useSafeArea - Allow to use safe area
  * @param contentContainerStyle - Additional styles to apply to the content container
  */
 
-const Container = ({ children, contentContainerStyle }: IContainer) => {
+const Container = ({
+  children,
+  useSafeArea = false,
+  contentContainerStyle,
+}: IContainer) => {
   const { bottom, top } = useSafeAreaInsets();
 
   return (
@@ -18,8 +23,8 @@ const Container = ({ children, contentContainerStyle }: IContainer) => {
       style={[
         {
           flex: 1,
-          // paddingTop: top,
-          // paddingBottom: bottom,
+          paddingTop: useSafeArea ? top : 0,
+          paddingBottom: useSafeArea ? bottom : 0,
           paddingHorizontal: 16,
         },
         contentContainerStyle,

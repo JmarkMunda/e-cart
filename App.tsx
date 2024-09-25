@@ -16,7 +16,7 @@ export default function App() {
   const theme =
     colorScheme === "dark" ? CombinedDarkTheme : CombinedDefaultTheme;
 
-  let isLoggedIn = true;
+  let isLoggedIn = false;
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -28,4 +28,3 @@ export default function App() {
     </QueryClientProvider>
   );
 }
-
