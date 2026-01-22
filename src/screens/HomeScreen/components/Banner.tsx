@@ -13,7 +13,8 @@ const Banner = () => {
     <LinearGradient
       colors={["#83b2f0", "#d4d2fc"]}
       start={[0.3, 0.5]}
-      style={styles.bannerContainer}>
+      style={styles.bannerContainer}
+    >
       <View style={{ flex: 1, gap: 4, paddingHorizontal: 8 }}>
         <View style={{ marginVertical: 8 }}>
           <Text color={colors.background}>New collection</Text>
@@ -27,12 +28,11 @@ const Banner = () => {
             styles.bannerButton,
             {
               borderColor: colors.background,
-              backgroundColor: !dark
-                ? "rgba(255, 255, 255, 0.5)"
-                : "rgba(0, 0, 0, 0.5)",
+              backgroundColor: !dark ? "rgba(255, 255, 255, 0.5)" : "rgba(0, 0, 0, 0.5)",
             },
-          ]}>
-          <Text variant="descriptionBold" color={colors.background}>
+          ]}
+        >
+          <Text variant="descriptionBold" color={colors.text}>
             Shop Now
           </Text>
         </TouchableOpacity>

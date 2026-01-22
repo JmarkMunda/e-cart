@@ -10,7 +10,8 @@ const HomeScreen = () => {
     <Container
       contentContainerStyle={{
         paddingTop: headerHeight,
-      }}>
+      }}
+    >
       <BrowseList />
     </Container>
   );

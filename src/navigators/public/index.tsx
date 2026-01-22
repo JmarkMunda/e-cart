@@ -3,16 +3,13 @@ import LoginScreen from "../../screens/LoginScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import RegisterScreen from "../../screens/RegisterScreen";
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = { Login: undefined; Register: undefined };
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const PublicNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="Login"
-        component={LoginScreen}
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Register" component={RegisterScreen} />
     </Stack.Navigator>
   );

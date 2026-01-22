@@ -36,18 +36,16 @@ const BrowseList = () => {
     </>
   );
 
-  const renderItem = ({ item, index }: IBrowseItem) => (
-    <ProductCard item={item} index={index} />
-  );
+  const renderItem = ({ item, index }: IBrowseItem) => <ProductCard item={item} index={index} />;
 
   return (
-    <View style={styles.listContainer}>
+    <View style={[styles.listContainer]}>
       <FlashList
         data={products}
         renderItem={renderItem}
         ListHeaderComponent={renderHeader}
-        estimatedItemSize={200}
         numColumns={2}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );

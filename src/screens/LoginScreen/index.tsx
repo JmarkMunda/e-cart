@@ -5,10 +5,15 @@ import Container from "../../components/Container";
 import TextInput from "../../components/TextInput";
 import CustomIcon from "../../components/CustomIcon";
 import { useAppTheme } from "../../utils/themes";
+import Button from "../../components/Button";
+import { Props } from "./utils/types";
+import { useStore } from "../../store";
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }: Props) => {
   const { colors } = useAppTheme();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const login = useStore((state) => state.login);
 
   return (
     <Container useSafeArea contentContainerStyle={styles.container}>
@@ -25,30 +30,18 @@ const LoginScreen = () => {
           value={email}
           onChangeText={setEmail}
           placeholder="Email address"
-          renderIcon={() => (
-            <CustomIcon
-              family="MaterialIcons"
-              name="email"
-              color={colors.text}
-            />
-          )}
+          renderIcon={() => <CustomIcon family="MaterialIcons" name="email" color={colors.text} />}
           hasError={!email}
         />
         <TextInput
-          value={email}
-          onChangeText={setEmail}
-          placeholder="Email address"
-          renderIcon={() => (
-            <CustomIcon
-              family="MaterialIcons"
-              name="email"
-              color={colors.text}
-            />
-          )}
-          hasError={!email}
+          value={password}
+          onChangeText={setPassword}
+          placeholder="Password"
+          renderIcon={() => <CustomIcon family="MaterialIcons" name="lock" color={colors.text} />}
+          hasError={!password}
         />
 
-        {/* BUTTON */}
+        <Button title="Login" onPress={login} />
       </View>
     </Container>
   );
